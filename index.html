@@ -5,10 +5,10 @@ layout: default
 <nav class="PageNavigation">
     <a href="{{ site.baseurl }}{{ site.posts.first.url }}">first</a>
     {% if post.next.url %}
-        <a class="prev" href="{{post.next.url}}">&laquo; {{post.next.title}}</a>
+        <a class="prev" href="{{post.next.url}}" title="{{post.next.title}}">&laquo; Previous</a>
     {% endif %}
     {% if post.previous.url %}
-        <a class="next" href="{{post.previous.url}}">{{post.previous.title}} &raquo;</a>
+        <a class="next" href="{{post.previous.url}}" title="{{post.previous.title}}">Next &raquo;</a>
     {% endif %}
     <a href="{{ site.baseurl }}{{ site.posts.last.url }}">last</a>
 </nav>
