@@ -8,13 +8,17 @@ layout: default
 
 <div class="posts">
     <article class="post">
-      <h1><a href="{{ site.baseurl }}{{ site.posts.last.url }}">{{ site.posts.last.title }}</a></h1>
+      <h1>{{ site.posts.last.title }}</h1>
 
       <div class="entry">
-        {{ site.posts.last.excerpt }}
+        {{ site.posts.last.content }}
       </div>
 
-      <a href="{{ site.baseurl }}{{ site.posts.last.url }}" class="read-more">Read More</a>
+      <div class="date">
+        Written on {{ site.posts.last.date | date: "%B %e, %Y" }}
+      </div>
+
+      {% include disqus.html %}
     </article>
   {% for post in site.posts %}
     <article class="post">
