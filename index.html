@@ -4,11 +4,11 @@ layout: default
 {% assign post = site.posts.last %}
 <nav class="PageNavigation">
     <a href="{{ site.baseurl }}{{ site.posts.first.url }}">first</a>
-    {% if post.previous.url %}
-        <a class="prev" href="{{post.previous.url}}">&laquo; {{post.previous.title}}</a>
-    {% endif %}
     {% if post.next.url %}
-        <a class="next" href="{{post.next.url}}">{{post.next.title}} &raquo;</a>
+        <a class="prev" href="{{post.next.url}}">&laquo; {{post.next.title}}</a>
+    {% endif %}
+    {% if post.previous.url %}
+        <a class="next" href="{{post.previous.url}}">{{post.previous.title}} &raquo;</a>
     {% endif %}
 </nav>
 <article class="post">
