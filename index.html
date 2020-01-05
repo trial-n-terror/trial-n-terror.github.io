@@ -6,6 +6,9 @@ layout: default
     {% if site.posts.last.previous.url %}
         <a class="prev" href="{{site.posts.last.previous.url}}">&laquo; {{site.posts.last.previous.title}}</a>
     {% endif %}
+    {% if site.posts.last.url %}
+        <a class="prev" href="{{site.posts.last.url}}">&raquo; {{site.posts.last.title}}</a>
+    {% endif %}
 </nav>
 
 <div class="posts">
