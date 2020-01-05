@@ -1,14 +1,18 @@
 ---
 layout: default
 ---
+{% assign post = page %}
 <nav class="PageNavigation">
-    {% if page.previous.url %}
-        <a class="prev" href="{{page.previous.url}}">&laquo; Previous</a>
+    <a href="{{ site.baseurl }}{{ site.posts.first.url }}">first</a>
+    {% if post.next.url %}
+        <a class="prev" href="{{post.next.url}}" title="{{post.next.title}}">&laquo; Previous</a>
     {% endif %}
-    {% if page.next.url %}
-        <a class="next" href="{{page.next.url}}">Next &raquo;</a>
+    {% if post.previous.url %}
+        <a class="next" href="{{post.previous.url}}" title="{{post.previous.title}}">Next &raquo;</a>
     {% endif %}
+    <a href="{{ site.baseurl }}{{ site.posts.last.url }}">last</a>
 </nav>
+
 <article class="post">
   <h1>{{ page.title }}</h1>
 
