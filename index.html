@@ -1,27 +1,24 @@
 ---
 layout: default
 ---
+{% assign post = site.posts.last %}
 <nav class="PageNavigation">
     <a href="{{ site.baseurl }}{{ site.posts.first.url }}">first</a>
-    {% if site.posts.last.previous.url %}
-        <a class="prev" href="{{site.posts.last.previous.url}}">&laquo; {{site.posts.last.previous.title}}</a>
+    {% if post.previous.url %}
+        <a class="prev" href="{{post.previous.url}}">&laquo; {{post.previous.title}}</a>
     {% endif %}
-    {% if site.posts.last.url %}
-        <a class="prev" href="{{site.posts.last.url}}">&raquo; {{site.posts.last.title}}</a>
+    {% if post.next.url %}
+        <a class="next" href="{{post.next.url}}">{{post.next.title}} &raquo;</a>
     {% endif %}
 </nav>
+<article class="post">
+  <h1>{{ post.title }}</h1>
 
-<div class="posts">
-    {% assign post = site.posts.last %}
-    <article class="post">
-      <h1>{{ post.title }}</h1>
+  <div class="entry">
+    {{ post.content }}
+  </div>
 
-      <div class="entry">
-        {{ post.content }}
-      </div>
-
-      <div class="date">
-        Written on {{ post.date | date: "%B %e, %Y" }}
-      </div>
-    </article>
-</div>
+  <div class="date">
+    Written on {{ post.date | date: "%B %e, %Y" }}
+  </div>
+</article>
