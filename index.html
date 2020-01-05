@@ -10,6 +10,7 @@ layout: default
     {% if post.previous.url %}
         <a class="next" href="{{post.previous.url}}">{{post.previous.title}} &raquo;</a>
     {% endif %}
+    <a href="{{ site.baseurl }}{{ site.posts.last.url }}">last</a>
 </nav>
 <article class="post">
   <h1>{{ post.title }}</h1>
