@@ -7,9 +7,7 @@ title: First test!
 
 English translation:
 
-Next year anything is possible!
-
-Why don't we put a christmastree on the moon?
+Next year anything is possible! Why don't we put a christmastree on the moon?
 
 
 "Behold! The first tree to grow at 1/6th of earths gravity!"
