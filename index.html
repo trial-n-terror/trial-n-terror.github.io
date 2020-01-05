@@ -1,6 +1,10 @@
 ---
 layout: default
 ---
+<nav class="PageNavigation">
+    <a href="{{ site.baseurl }}{{ site.posts.first.url }}">first</a>
+    <a class="prev" href="{{site.posts.last.previous.url}}">&laquo; {{site.posts.last.previous.title}}</a>
+</nav>
 
 <div class="posts">
     <article class="post">
