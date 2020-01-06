@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{% assign post = site.posts.last %}
+{% assign post = site.posts.first %}
 <nav class="PageNavigation">
     <a href="{{ site.baseurl }}{{ site.posts.last.url }}">first</a>
     {% if post.next.url %}
