@@ -3,14 +3,14 @@ layout: default
 ---
 {% assign post = page %}
 <nav class="PageNavigation">
-    <a href="{{ site.baseurl }}{{ site.posts.first.url }}">first</a>
+    <a href="{{ site.baseurl }}{{ site.posts.last.url }}">first</a>
     {% if post.next.url %}
-        <a class="prev" href="{{post.next.url}}" title="{{post.next.title}}">&laquo; Previous</a>
+        <a class="prev" href="{{post.previous.url}}" title="{{post.previous.title}}">&laquo; Previous</a>
     {% endif %}
     {% if post.previous.url %}
-        <a class="next" href="{{post.previous.url}}" title="{{post.previous.title}}">Next &raquo;</a>
+        <a class="next" href="{{post.next.url}}" title="{{post.next.title}}">Next &raquo;</a>
     {% endif %}
-    <a href="{{ site.baseurl }}{{ site.posts.last.url }}">last</a>
+    <a href="{{ site.baseurl }}{{ site.posts.first.url }}">last</a>
 </nav>
 
 <article class="post">
