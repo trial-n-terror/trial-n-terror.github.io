@@ -23,7 +23,9 @@ let button;
 
 
 function setup() {
-  createCanvas(400, 400);
+  var canvas = createCanvas(400, 400);
+ 
+  // Move the canvas so it’s inside our <div id="sketch-holder">.
   canvas.parent('sketch-holder');
   
   dotSlider = createSlider(0, 100, 10);
