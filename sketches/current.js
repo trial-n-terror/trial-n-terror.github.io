@@ -24,6 +24,8 @@ let button;
 
 function setup() {
   createCanvas(400, 400);
+  canvas.parent('sketch-holder');
+  
   dotSlider = createSlider(0, 100, 10);
   dotSlider.position(250, 20);
   speedSlider = createSlider(0, 10, 1);
