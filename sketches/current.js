@@ -30,8 +30,10 @@ function setup() {
   
   dotSlider = createSlider(0, 100, 10);
   dotSlider.position(250, 20);
+  dotSlider.parent('sketch-holder');
   speedSlider = createSlider(0, 10, 1);
   speedSlider.position(250, 50);
+  speedSlider.parent('sketch-holder');
 
   radio = createRadio();
   radio.option('create point', 1);
@@ -42,6 +44,7 @@ function setup() {
   radio.style('width', '110px');
   textAlign(CENTER);
   radio.position(250, 80);
+  radio.parent('sketch-holder');
 }
 
 let t = 0;
