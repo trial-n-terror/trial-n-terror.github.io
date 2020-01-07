@@ -41,7 +41,7 @@ function setup() {
   radio.option('create switch', 3);
   radio.option('delete switch', 4);
   radio.option('flip switch', 5);
-  radio.style('width', '110px');
+  radio.style('width', '130px');
   textAlign(CENTER);
   radio.position(250, 80);
   radio.parent('sketch-holder');
