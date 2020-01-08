@@ -80,7 +80,7 @@ function draw() {
 }
 
 function mouseClicked() {
-  if (mouseX > width && mouseX < 0 && mouseY > height && mouseY < 0) {
+  if (mouseX > width || mouseX < 0 || mouseY > height || mouseY < 0) {
     return;
   }
   if (mouseX > 250) {
