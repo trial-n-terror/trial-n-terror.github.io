@@ -23,6 +23,11 @@ body {
   color: $darkGray;
 }
 
+input[type=radio],
+input[type=radio]+label {
+    float: right;
+}
+
 .container {
   margin: 0 auto;
   max-width: 740px;
