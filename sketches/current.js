@@ -80,8 +80,11 @@ function draw() {
 }
 
 function mouseClicked() {
+  if (mouseX <= width && mouseX >= 0 && mouseY <= height && mouseY >= 0) {
+    return false;
+  }
   if (mouseX > 250) {
-    return;
+    return false;
   }
   let val = parseInt(radio.value());
   switch (val) {
