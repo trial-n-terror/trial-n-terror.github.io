@@ -36,7 +36,7 @@ function setup() {
   speedSlider.parent('sketch-holder');
 
   radio = createRadio();
-  radio.option('create point', 1);
+  radio.option('create point<br>', 1);
   radio.option('delete point', 2);
   radio.option('create switch', 3);
   radio.option('delete switch', 4);
